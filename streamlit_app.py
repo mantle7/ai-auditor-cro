@@ -1,4 +1,5 @@
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -11,6 +12,21 @@ from personas import list_personas
 PROJECT_DIR = Path(__file__).resolve().parent
 OUTPUT_DIR = PROJECT_DIR / "output"
 REPORT_PATH = OUTPUT_DIR / "final_report.json"
+MAX_AUDITS_PER_SESSION = 5
+
+if "audit_count" not in st.session_state:
+    st.session_state["audit_count"] = 0
+
+
+for secret_name in ("GROQ_API_KEY", "GEMINI_API_KEY"):
+    if not os.getenv(secret_name):
+        try:
+            secret_value = st.secrets.get(secret_name)
+        except (FileNotFoundError, KeyError):
+            secret_value = None
+
+        if secret_value:
+            os.environ[secret_name] = str(secret_value)
 
 
 st.set_page_config(
@@ -23,6 +39,10 @@ st.title("AI-powered Website Audit")
 st.caption(
     "See how a customer persona experiences your website, identify conversion "
     "friction, and leave with a focused test plan."
+)
+st.caption(
+    f"Audits used this session: {st.session_state['audit_count']} / "
+    f"{MAX_AUDITS_PER_SESSION}"
 )
 
 persona_options = list_personas()
@@ -59,7 +79,13 @@ with st.form("audit_form"):
 if submitted:
     if not url.startswith(("https://", "http://")):
         st.error("Enter a complete URL beginning with http:// or https://.")
+    elif st.session_state["audit_count"] >= MAX_AUDITS_PER_SESSION:
+        st.error(
+            "This session has reached its limit of 5 audits. "
+            "Start a new authorized session to continue."
+        )
     else:
+        st.session_state["audit_count"] += 1
         command = [
             sys.executable,
             str(PROJECT_DIR / "app.py"),

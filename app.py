@@ -1,10 +1,12 @@
 import argparse
+import shutil
 
 from constants import URL
 
 import json
 from pathlib import Path
 from reporting import build_client_report
+from audit_logging import log_audit_event
 
 from personas import (
     DEFAULT_PERSONA_ID,
@@ -214,7 +216,20 @@ def classify_section(section):
     return "other"
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
+    chromium_path = (
+        shutil.which("chromium")
+        or shutil.which("chromium-browser")
+        or shutil.which("google-chrome")
+    )
+    launch_options = {
+        "headless": True,
+        "args": ["--no-sandbox", "--disable-dev-shm-usage"],
+    }
+
+    if chromium_path:
+        launch_options["executable_path"] = chromium_path
+
+    browser = p.chromium.launch(**launch_options)
 
     page = browser.new_page(
         viewport={
@@ -224,6 +239,11 @@ with sync_playwright() as p:
     )
 
     print(f"Auditing: {TARGET_URL}")
+    log_audit_event(
+        TARGET_URL,
+        SELECTED_PERSONA,
+        status="started",
+    )
 
     try:
         page.goto(
@@ -233,6 +253,12 @@ with sync_playwright() as p:
         )
     except PlaywrightError as error:
         error_text = str(error)
+        log_audit_event(
+            TARGET_URL,
+            SELECTED_PERSONA,
+            status="failed",
+            error=error_text,
+        )
         print(
             f"Unable to access {TARGET_URL}. The website or local network "
             "blocked the browser request."
@@ -619,3 +645,9 @@ with open(report_path, "w", encoding="utf-8") as file:
     json.dump(final_report, file, indent=2, ensure_ascii=False)
 
 print(f"Client report saved to: {report_path}")
+log_audit_event(
+    TARGET_URL,
+    SELECTED_PERSONA,
+    status="completed",
+    report_path=report_path,
+)
