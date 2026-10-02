@@ -1,4 +1,11 @@
 import json
+from io import BytesIO
+
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import inch
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.lib import colors
 
 
 def _as_dict(value):
@@ -115,3 +122,94 @@ def build_client_report(url, persona, simulation_analysis, cro_analysis=None):
             "This report is based on website evidence and simulated behavior.",
         ),
     }
+
+
+def build_report_pdf(report):
+    """Render the client report as a portable PDF download."""
+
+    buffer = BytesIO()
+    document = SimpleDocTemplate(
+        buffer,
+        pagesize=A4,
+        rightMargin=0.65 * inch,
+        leftMargin=0.65 * inch,
+        topMargin=0.6 * inch,
+        bottomMargin=0.6 * inch,
+    )
+    styles = getSampleStyleSheet()
+    styles.add(ParagraphStyle(
+        name="SmallMuted",
+        parent=styles["Normal"],
+        fontSize=8.5,
+        textColor=colors.HexColor("#667482"),
+        leading=12,
+    ))
+    styles.add(ParagraphStyle(
+        name="Action",
+        parent=styles["Normal"],
+        fontSize=10,
+        leading=14,
+        spaceAfter=4,
+    ))
+
+    persona = report.get("persona", {})
+    scores = report.get("scores", {})
+    story = [
+        Paragraph("AI-powered Website Audit", styles["Title"]),
+        Paragraph("CRO Opportunity Snapshot", styles["Heading2"]),
+        Spacer(1, 8),
+        Paragraph(f"<b>URL:</b> {report.get('url', '-')}", styles["Normal"]),
+        Paragraph(
+            f"<b>Persona:</b> {persona.get('name', '-')} ({persona.get('segment', '-')})",
+            styles["Normal"],
+        ),
+        Spacer(1, 14),
+        Paragraph("Overall conversion readiness", styles["Heading2"]),
+        Paragraph(
+            str(scores.get("conversion_readiness", "-")),
+            styles["Title"],
+        ),
+        Spacer(1, 8),
+    ]
+
+    breakdown_rows = [["Section", "Score", "Definition"]]
+    for item in report.get("score_breakdown", []):
+        name = item.get("name", "Section")
+        definition = report.get("score_definitions", {}).get(name, "Evidence-based section score.")
+        breakdown_rows.append([name, f"{item.get('score', '-')} / 20", definition])
+
+    breakdown = Table(breakdown_rows, colWidths=[1.55 * inch, 0.8 * inch, 4.6 * inch])
+    breakdown.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#e8eef2")),
+        ("TEXTCOLOR", (0, 0), (-1, 0), colors.HexColor("#17212b")),
+        ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#d5dee4")),
+        ("VALIGN", (0, 0), (-1, -1), "TOP"),
+        ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+        ("FONTSIZE", (0, 0), (-1, -1), 8.5),
+        ("LEADING", (0, 0), (-1, -1), 11),
+        ("PADDING", (0, 0), (-1, -1), 6),
+    ]))
+    story.extend([breakdown, Spacer(1, 16)])
+
+    story.append(Paragraph("What to test next", styles["Heading2"]))
+    for insight in report.get("actionable_insights", []):
+        story.extend([
+            Paragraph(
+                f"<b>{insight.get('priority', '')}. {insight.get('action', '')}</b>",
+                styles["Action"],
+            ),
+            Paragraph(f"Evidence: {insight.get('evidence', '-')}", styles["Normal"]),
+            Spacer(1, 8),
+        ])
+
+    next_step = report.get("recommended_next_step", {})
+    story.extend([
+        Paragraph("Recommended next step", styles["Heading2"]),
+        Paragraph(f"<b>{next_step.get('offer', '-')}</b>", styles["Normal"]),
+        Paragraph(next_step.get("reason", "-"), styles["Normal"]),
+        Spacer(1, 12),
+        Paragraph(report.get("disclaimer", ""), styles["SmallMuted"]),
+    ])
+
+    document.build(story)
+    return buffer.getvalue()

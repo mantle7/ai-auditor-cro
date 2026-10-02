@@ -7,6 +7,7 @@ from pathlib import Path
 import streamlit as st
 
 from personas import list_personas
+from reporting import build_report_pdf
 
 
 PROJECT_DIR = Path(__file__).resolve().parent
@@ -119,6 +120,10 @@ report = st.session_state.get("report")
 if report:
     st.divider()
     st.caption("Audit result")
+    st.write(
+        f"**URL:** {report.get('url', '-')}  "
+        f"\n\n**Persona:** {report.get('persona', {}).get('name', '-')}"
+    )
     scores = report.get("scores", {})
     st.metric(
         "Overall conversion readiness",
@@ -161,4 +166,10 @@ if report:
         data=json.dumps(report, indent=2, ensure_ascii=False),
         file_name="cro-opportunity-report.json",
         mime="application/json",
+    )
+    st.download_button(
+        "Download report PDF",
+        data=build_report_pdf(report),
+        file_name="cro-opportunity-report.pdf",
+        mime="application/pdf",
     )
