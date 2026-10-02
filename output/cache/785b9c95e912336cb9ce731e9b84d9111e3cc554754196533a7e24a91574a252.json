@@ -1,0 +1,23 @@
+{
+  "total_runs": 1,
+  "decision_summary": {"continue": 0, "hesitate": 0, "abandon": 0},
+  "overall_decision": "mixed",
+  "confidence": "medium",
+  "key_patterns": [
+    {
+      "issue": "Missing visual product cues and clear differentiation",
+      "frequency": 1,
+      "severity": "high",
+      "evidence": "Sections 0, 1, 2, and 6 all noted no product images, no visual direction, and no descriptive differences between items, causing confusion."
+    }
+  ],
+  "key_objections": [],
+  "strongest_conversion_signals": [],
+  "recommended_actions": [
+    {
+      "priority": 1,
+      "action": "Add prominent product images and concise comparison descriptors to highlight differences between options.",
+      "reason": "The simulation repeatedly highlighted an information gap around visual cues and product differentiation, leading to hesitation."
+    }
+  ]
+}

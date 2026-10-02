@@ -1,0 +1,67 @@
+[
+  {
+    "persona": {
+      "id": "b2b_growth_lead",
+      "segment": "B2B SaaS",
+      "name": "Marketing Lead",
+      "role": "Marketing / Growth lead",
+      "company": "B2B SaaS company",
+      "company_size": "100-500 employees",
+      "goal": "Increase qualified demo requests and trial conversions.",
+      "pain_points": [
+        "Low website conversion rate",
+        "Limited traffic for A/B testing",
+        "Difficulty identifying why visitors abandon",
+        "Pressure to demonstrate marketing ROI"
+      ],
+      "buying_concerns": [
+        "Accuracy",
+        "Implementation effort",
+        "Integration requirements",
+        "Price",
+        "Expected conversion improvement"
+      ],
+      "desired_outcome": "Find the highest-priority conversion hypotheses quickly."
+    },
+    "runs": [
+      {
+        "persona": "Marketing Lead",
+        "run": 1,
+        "journey": [
+          {
+            "section_index": 0,
+            "section_type": "navigation",
+            "what_i_notice": "A short line that says “Grab the free guide on Increasing Conversion Rates!”",
+            "customer_thought": "It looks like a free resource that could help me solve my low‑conversion problem.",
+            "information_gap": "How do I actually get the guide? There is no button, link, or form shown.",
+            "decision": "hesitate",
+            "next_information_needed": "A clear call‑to‑action (button or form) that explains what I need to do to receive the guide and what the guide contains.",
+            "reason": "The offer is relevant but the path to obtain it is missing, so I’m not sure whether to stay or leave.",
+            "confidence": "medium"
+          },
+          {
+            "section_index": 1,
+            "section_type": "other",
+            "what_i_notice": "A paragraph inviting me to “Book a quick 15 min meeting … Schedule Free Meeting with Ibrahim” followed by contact email and social‑media icons.",
+            "customer_thought": "A personal meeting could be useful, but I need to know how to actually schedule it and why Ibrahim is qualified.",
+            "information_gap": "No visible scheduling link or calendar, no details about meeting agenda, no proof of credibility (e.g., client logos, testimonials).",
+            "decision": "hesitate",
+            "next_information_needed": "A clickable scheduling button or link, brief bio of Ibrahim, and evidence that the meeting will address my specific conversion challenges.",
+            "reason": "The offer is appealing but the execution is vague; I’m unsure if it’s worth my time.",
+            "confidence": "low"
+          }
+        ],
+        "overall_outcome": "hesitate",
+        "overall_reason": "Both sections present relevant offers (free guide, free meeting) but lack clear, actionable steps and credibility details, leaving me uncertain whether to continue.",
+        "key_objections": [
+          "No obvious CTA/button to get the free guide",
+          "No scheduling mechanism for the 15‑minute meeting",
+          "Unclear credibility of the presenter (Ibrahim)",
+          "Missing details about what the guide/meeting will actually deliver"
+        ],
+        "strongest_conversion_signal": "The promise of a free guide on increasing conversion rates, which directly matches my primary goal.",
+        "confidence": "low"
+      }
+    ]
+  }
+]

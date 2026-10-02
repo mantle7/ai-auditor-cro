@@ -1,0 +1,27 @@
+{
+  "total_runs":1,
+  "decision_summary":{"continue":0,"hesitate":0,"abandon":0},
+  "overall_decision":"mixed",
+  "confidence":"medium",
+  "key_patterns":[
+    {
+      "issue":"Unclear discount terms and total price (including shipping and bundles)",
+      "frequency":1,
+      "severity":"high",
+      "evidence":"Hero section hesitates due to vague 50% discount calculation and missing final price; social proof shows price hints but no shipping or bundle info; other section lacks full catalog and bundle deals."
+    }
+  ],
+  "key_objections":[
+    "Discount terms are vague; need concrete numbers to compare total cost."
+  ],
+  "strongest_conversion_signals":[
+    "Social proof provides useful price hints that catch attention."
+  ],
+  "recommended_actions":[
+    {
+      "priority":1,
+      "action":"Display clear pricing details—including how the 50% discount is calculated, total price with shipping, and available bundle options—on the hero section and product listings.",
+      "reason":"Simulation hesitated at the hero because discount terms were unclear and total cost was missing, which is a primary concern for the value‑focused persona."
+    }
+  ]
+}

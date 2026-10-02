@@ -1,0 +1,15 @@
+{
+  "persona":"SaaS Growth Manager",
+  "run":1,
+  "journey":[
+    {
+      "section_index":0,
+      "section_type":"navigation",
+      "what_i_notice":"Top navigation bar with links: HOME, NEW ARRIVALS, EARRINGS, NECKLACES, BRACELETS, RINGS, MEN'S JEWELLERY, SHOP ALL, Log in, Cart.",
+      "customer_thought":"This looks like a typical jewelry e‑commerce site with many product categories.",
+      "information_gap":"No brand tagline, no highlighted promotion or hero image to explain what makes this site special.",
+      "decision":"continue",
+      "next_information_needed":"A hero/banner that clarifies the brand promise or a featured product.",
+      "reason":"The navigation gives a sense of breadth, so I’m willing to look further.",
+      "confidence":"medium"
+    }]}

@@ -1,0 +1,59 @@
+{
+  "overall_summary": "The homepage overwhelms first‑time visitors with dense navigation, generic messaging, weak trust cues, and unclear calls to action, which likely hampers conversion.",
+  "findings": [
+    {
+      "title": "Overloaded navigation and copy",
+      "severity": "high",
+      "type": "friction | ux",
+      "evidence": [
+        "navigation list includes dozens of links: Products, Solutions, Developers, Company, Pricing, Contact, Chat Messaging, Video & Audio, Activity Feeds, AI Moderation, Vision Agents, plus many solution sub‑pages (Dating, Education, Financial, Gaming, etc.)",
+        "hero sections repeat long copy such as \"Build Chat, Video, Feeds and Moderation. Install the Stream skill to ship in minutes and scale to billions.\""
+      ],
+      "interpretation": "The sheer number of options and repeated text creates cognitive overload, making it hard for users to identify the primary product and next step.",
+      "hypothesis": "Decision paralysis reduces the likelihood that a visitor will click a conversion CTA, lowering sign‑up rates.",
+      "recommendation": "Streamline the top navigation to a few core items and consolidate solution links under a single dropdown; reduce duplicate hero copy.",
+      "suggested_change": "Replace the current nav with: Products, Solutions, Pricing, Contact, Get Started. Collapse solution categories into a hover menu.",
+      "confidence": "high"
+    },
+    {
+      "title": "Unclear primary call‑to‑action above the fold",
+      "severity": "high",
+      "type": "conversion",
+      "evidence": [
+        "hero text includes \"Get started Talk to an expert\" but no distinct button label is captured in the data.",
+        "CTA section later reads \"Start building in-app experiences for free. Get started Talk to an expert\" without visual hierarchy."
+      ],
+      "interpretation": "Visitors cannot quickly discern the recommended action, leading to hesitation or exit.",
+      "hypothesis": "Ambiguous CTA reduces click‑through to the signup flow, decreasing conversion rates.",
+      "recommendation": "Add a prominent, contrasting primary CTA button that states the exact next step, e.g., \"Start Free Trial\".",
+      "suggested_change": "Replace the generic \"Get started\" text with a large button labeled \"Start Free Trial\" placed directly under the hero headline.",
+      "confidence": "medium"
+    },
+    {
+      "title": "Generic product messaging without clear benefits",
+      "severity": "medium",
+      "type": "messaging",
+      "evidence": [
+        "Repeated phrases like \"Build any in-app chat or messaging. SDKs for fully customizable UI\" and \"AI skill for faster development\" appear without concrete outcomes.",
+        "No copy directly addresses pain points such as time‑to‑market, cost savings, or reliability beyond technical specs."
+      ],
+      "interpretation": "The copy tells what the product does but not why it matters to the buyer, limiting perceived value.",
+      "hypothesis": "Potential customers may not see a compelling reason to choose Stream over competitors, leading to lower intent.",
+      "recommendation": "Rewrite hero and sub‑headings to focus on benefits, e.g., \"Launch chat in days, not weeks, with 99.999% uptime\".",
+      "suggested_change": "Change hero sub‑text to: \"Ship fully‑featured chat, video, and feeds in minutes, backed by 99.999% uptime and zero hidden limits.\"",
+      "confidence": "medium"
+    },
+    {
+      "title": "Insufficient trust signals beyond technical stats",
+      "severity": "medium",
+      "type": "trust",
+      "evidence": [
+        "Social proof section only lists metrics: \"1B+ end users 99.999% uptime SLA 8ms median API response\".",
+        "No customer logos, testimonials, or case‑study excerpts are present in the captured data."
+      ],
+      "interpretation": "Technical performance data alone may not reassure new buyers; they often look for recognizable brand endorsements.",
+      "hypothesis": "Lack of social proof can increase perceived risk, causing prospects to abandon the site.",
+      "recommendation": "Add a carousel of well‑known client logos (e.g., eBay) and short quote testimonials on the homepage.",
+      "suggested_change": "Insert a section titled \"Trusted by\" with logos of eBay, Coinbase, etc., followed by a quote: \"Stream reduced our chat development time by 80%.\"",
+      "confidence": "medium"
+    }]}

@@ -1,0 +1,31 @@
+{
+  "total_runs": 1,
+  "decision_summary": { "continue": 0, "hesitate": 0, "abandon": 0 },
+  "overall_decision": "mixed",
+  "confidence": "low",
+  "key_patterns": [
+    {
+      "issue": "Navigation lacks clear demo or pricing link",
+      "frequency": 1,
+      "severity": "high",
+      "evidence": "User noted no obvious link to a demo request or pricing summary from the navigation bar, causing uncertainty."
+    },
+    {
+      "issue": "Hero section uses jargon and unclear CTA",
+      "frequency": 1,
+      "severity": "high",
+      "evidence": "User hesitated, asking how to request a demo or see pricing, indicating the “Get started” label was unclear."
+    }
+  ],
+  "key_objections": [],
+  "strongest_conversion_signals": [
+    "User continued after seeing specifics on trial access, pricing, and integration effort in the hero section."
+  ],
+  "recommended_actions": [
+    {
+      "priority": 1,
+      "action": "Add a prominent, clearly labeled “Request Demo” or “Pricing” link in the main navigation and replace ambiguous “Get started” with explicit CTA text.",
+      "reason": "Simulation showed hesitation due to missing demo/pricing links and jargon, suggesting clearer CTAs could reduce friction."
+    }
+  ]
+}

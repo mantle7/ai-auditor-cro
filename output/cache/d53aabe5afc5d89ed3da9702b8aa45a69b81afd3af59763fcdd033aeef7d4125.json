@@ -1,0 +1,10 @@
+{
+  "total_runs":1,
+  "decision_summary":{"continue":0,"hesitate":0,"abandon":0},
+  "overall_decision":"continue",
+  "confidence":"medium",
+  "key_patterns":[{"issue":"Missing trust and credibility signals (brand identity, trust badges, security cues)","frequency":1,"severity":"high","evidence":"In the navigation section the simulated persona noted an information gap: 'Brand identity, trust badges, any indication of security or credibility.'"}],
+  "key_objections":[],
+  "strongest_conversion_signals":["The persona chose to continue after each visited section, indicating sustained interest despite information gaps."],
+  "recommended_actions":[{"priority":1,"action":"Add visible trust badges, security seals, and a brief brand credibility statement to the header/navigation area","reason":"Simulation showed the buyer needed brand identity and security cues before feeling safe to proceed."}]
+}

@@ -1,0 +1,52 @@
+{
+  "total_runs": 1,
+  "decision_summary": {"continue": 0, "hesitate": 1, "abandon": 0},
+  "overall_decision": "hesitate",
+  "confidence": "low",
+  "key_patterns": [
+    {
+      "issue": "Missing CTA/button to obtain the free guide",
+      "frequency": 1,
+      "severity": "high",
+      "evidence": "Section 0 (navigation) shows the offer but no button, link, or form to get the guide."
+    },
+    {
+      "issue": "No visible scheduling mechanism for the 15‑minute meeting",
+      "frequency": 1,
+      "severity": "high",
+      "evidence": "Section 1 (other) lacks a calendar link or details on how to book the meeting."
+    },
+    {
+      "issue": "Unclear presenter credibility",
+      "frequency": 1,
+      "severity": "medium",
+      "evidence": "Section 1 provides no client logos, testimonials, or background on Ibrahim."
+    }
+  ],
+  "key_objections": [
+    "No obvious CTA/button to get the free guide",
+    "No scheduling mechanism for the 15‑minute meeting",
+    "Unclear credibility of the presenter (Ibrahim)",
+    "Missing details about what the guide/meeting will actually deliver"
+  ],
+  "strongest_conversion_signals": [
+    "The promise of a free guide on increasing conversion rates, which directly matches the persona's primary goal."
+  ],
+  "recommended_actions": [
+    {
+      "priority": 1,
+      "action": "Add a prominent, clearly labeled CTA button or form to download the free guide.",
+      "reason": "Simulation showed hesitation due to the absence of any way to obtain the guide despite interest."
+    },
+    {
+      "priority": 2,
+      "action": "Include a scheduling widget or link for the 15‑minute meeting with clear agenda details.",
+      "reason": "Visitor hesitated because no mechanism to book the meeting was visible."
+    },
+    {
+      "priority": 3,
+      "action": "Display credibility signals such as client logos, testimonials, or a brief bio for Ibrahim.",
+      "reason": "Lack of credibility information contributed to uncertainty about the offer's value."
+    }
+  ]
+}

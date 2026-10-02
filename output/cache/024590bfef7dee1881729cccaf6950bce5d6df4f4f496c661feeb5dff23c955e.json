@@ -1,0 +1,26 @@
+{
+  "persona":"Confused First-Time Shopper",
+  "run":1,
+  "journey":[
+    {
+      "section_index":0,
+      "section_type":"navigation",
+      "what_i_notice":"A top navigation bar with links: HOME, NEW ARRIVALS, EARRINGS, NECKLACES, BRACELETS, RINGS, MEN'S JEWELLERY, SHOP ALL, Log in, Cart.",
+      "customer_thought":"There are many categories; I’m not sure where to start as a first‑time buyer.",
+      "information_gap":"No visual hero or guidance pointing to a best‑seller or beginner‑friendly collection.",
+      "decision":"hesitate",
+      "next_information_needed":"A clear entry point – e.g., a featured product or a “Shop for first‑time buyers” banner.",
+      "reason":"Too many options without direction makes me pause.",
+      "confidence":"low"
+    },
+    {
+      "section_index":1,
+      "section_type":"other",
+      "what_i_notice":"Repeated promotional copy about 18K gold‑plated jewellery, “Buy 2 or more, get up to 50% off”, “Save ₹120 on prepaid orders + express delivery”. No images or buttons.",
+      "customer_thought":"The discounts sound good, but I don’t know what products they apply to.",
+      "information_gap":"No product visuals, prices, or direct links to the offers.",
+      "decision":"hesitate",
+      "next_information_needed":"Product thumbnails linked to the promotion.",
+      "reason":"I can’t connect the offer to anything concrete.",
+      "confidence":"low"
+    }]}

@@ -1,0 +1,150 @@
+{
+  "total_runs": 1,
+  "decision_summary": {
+    "continue": 0,
+    "hesitate": 1,
+    "abandon": 0
+  },
+  "overall_decision": "hesitate",
+  "confidence": "low",
+  "key_patterns": [
+    {
+      "issue": "Missing CTA/button to obtain the free guide",
+      "frequency": 1,
+      "severity": "high",
+      "evidence": "Section 0 (navigation) shows the offer but no button, link, or form to get the guide."
+    },
+    {
+      "issue": "No visible scheduling mechanism for the 15‑minute meeting",
+      "frequency": 1,
+      "severity": "high",
+      "evidence": "Section 1 (other) lacks a calendar link or details on how to book the meeting."
+    },
+    {
+      "issue": "Unclear presenter credibility",
+      "frequency": 1,
+      "severity": "medium",
+      "evidence": "Section 1 provides no client logos, testimonials, or background on Ibrahim."
+    }
+  ],
+  "key_objections": [
+    "No obvious CTA/button to get the free guide",
+    "No scheduling mechanism for the 15‑minute meeting",
+    "Unclear credibility of the presenter (Ibrahim)",
+    "Missing details about what the guide/meeting will actually deliver"
+  ],
+  "strongest_conversion_signals": [
+    "The promise of a free guide on increasing conversion rates, which directly matches the persona's primary goal."
+  ],
+  "recommended_actions": [
+    {
+      "priority": 1,
+      "action": "Add a prominent, clearly labeled CTA button or form to download the free guide.",
+      "reason": "Simulation showed hesitation due to the absence of any way to obtain the guide despite interest."
+    },
+    {
+      "priority": 2,
+      "action": "Include a scheduling widget or link for the 15‑minute meeting with clear agenda details.",
+      "reason": "Visitor hesitated because no mechanism to book the meeting was visible."
+    },
+    {
+      "priority": 3,
+      "action": "Display credibility signals such as client logos, testimonials, or a brief bio for Ibrahim.",
+      "reason": "Lack of credibility information contributed to uncertainty about the offer's value."
+    }
+  ],
+  "scorecard": {
+    "method": "deterministic_evidence_score",
+    "conversion_readiness_score": 67,
+    "cro_opportunity_score": 100,
+    "revenue_readiness_score": 67,
+    "confidence": "low",
+    "dimensions": [
+      {
+        "name": "Value clarity",
+        "score": 14,
+        "maximum": 20
+      },
+      {
+        "name": "Conversion path",
+        "score": 7,
+        "maximum": 20
+      },
+      {
+        "name": "Trust and risk reduction",
+        "score": 16,
+        "maximum": 20
+      },
+      {
+        "name": "Journey friction",
+        "score": 10,
+        "maximum": 20
+      },
+      {
+        "name": "Evaluation clarity",
+        "score": 20,
+        "maximum": 20
+      }
+    ],
+    "evidence_drivers": [
+      {
+        "dimension": "Value clarity",
+        "deduction": 6,
+        "evidence": "Vague headline with no supporting copy"
+      },
+      {
+        "dimension": "Journey friction",
+        "deduction": 6,
+        "evidence": "Missing audience definition under \"Who is this for?\""
+      },
+      {
+        "dimension": "Trust and risk reduction",
+        "deduction": 4,
+        "evidence": "Insufficient trust signals"
+      },
+      {
+        "dimension": "Journey friction",
+        "deduction": 4,
+        "evidence": "Redundant and unlabeled navigation links"
+      },
+      {
+        "dimension": "Conversion path",
+        "deduction": 6,
+        "evidence": "No visible form or clear CTA for the free guide"
+      },
+      {
+        "dimension": "Conversion path",
+        "deduction": 4,
+        "evidence": "The simulated customer hesitated before converting."
+      },
+      {
+        "dimension": "Conversion path",
+        "deduction": 3,
+        "evidence": "Simulated objection mentions cta."
+      }
+    ],
+    "score_interpretation": {
+      "conversion_readiness": "Higher means fewer evidence-backed friction signals were found.",
+      "cro_opportunity": "Higher means more high-severity findings, objections, or simulated hesitation/abandonment were identified. It is not a probability, revenue forecast, or conversion uplift estimate.",
+      "components": {
+        "website_finding_severity": 78,
+        "simulated_outcome": 12,
+        "customer_objections": 20
+      }
+    },
+    "revenue_opportunity_scenario": {
+      "status": "requires_client_baseline",
+      "message": "Provide monthly visitors, baseline conversion rate, average conversion value, and an explicit assumed relative lift range."
+    },
+    "recommended_next_step": {
+      "offer": "Run a focused A/B test or start a CRO program",
+      "reason": "Use the first insight as an A/B test hypothesis. If the site needs several coordinated changes, a CRO program can manage research, implementation, and experiment measurement.",
+      "scope": [
+        "Confirm the baseline conversion event and current performance.",
+        "Test the highest-priority insight against the current experience.",
+        "Use a CRO program when multiple experiments need to be prioritized and executed."
+      ]
+    },
+    "disclaimer": "Scores prioritize audit evidence and one simulated journey. They do not measure real visitor behavior or guarantee revenue impact."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "persona": "Trust-First D2C Buyer",
+  "run": 1,
+  "journey": [
+    {
+      "section_index": 0,
+      "section_type": "navigation",
+      "what_i_notice": "Top navigation bar with links: HOME, NEW ARRIVALS, EARRINGS, NECKLACES, BRACELETS, RINGS, MEN'S JEWELLERY, SHOP ALL, Log in, Cart.",
+      "customer_thought": "I can see the main product categories and a way to log in or view my cart. No brand name or trust signals yet.",
+      "information_gap": "Brand identity, trust badges, any indication of security or credibility.",
+      "decision": "continue",
+      "next_information_needed": "Product listings with details, brand story or trust signals.",
+      "reason": "I need to see what products are offered before I can judge the brand.",
+      "confidence": "medium"
+    },
+    {
+      "section_index": 1,
+      "section_type": "other",
+      "what_i_notice": "Promotional banner stating \"18K gold plated · elevate your everyday look · made to last a lifetime\" plus discount offers (up to 50% off, prepaid savings, express delivery).",
+      "customer_thought": "The claim of 18K gold plating sounds premium, and the discounts are attractive, but I’m not sure how genuine the plating is.",
+      "information_gap": "Evidence of the gold‑plating claim, material specifications, hypoallergenic information.",
+      "decision": "continue",
+      "next_information_needed": "Detailed product specs and material verification.",
+      "reason": "Price and style are appealing, but I need proof of quality before I feel safe.",
+      "confidence": "low"
+    },
+    {
+      "section_index": 2,
+      "section_type": "social_proof",
+      "what_i_notice": "Product thumbnails with prices and a note \"Let customers speak for us from 27 reviews\" followed by short review snippets praising versatility, quality, and non‑allergic nature.",
+      "customer_thought": "There are some positive reviews, which is reassuring, especially the mention of non‑allergic material.",
+      "information_gap": "Full review content, star ratings, verification of reviewers, and how recent the reviews are.",
+      "decision": "continue",
+      "next_information_needed": "Complete reviews and any rating summary.",
+      "reason": "Initial social proof is helpful but incomplete; I want more detail.",
+      "confidence": "medium"
+    },
+    {
+      "section_index": 6,
+      "section_type": "other",
+      "what_i_notice": "Repeated list of new‑arrival products with regular and sale prices, no additional details.",
+      "customer_thought": "I see the range and pricing, but still no information about materials or guarantees.",
+      "information_gap": "Product descriptions, material composition, size/fit info, and any quality guarantees.",
+      "decision": "continue",
+      "next_information_needed": "Clickable product pages with specs.",
+      "reason": "Pricing alone isn’t enough; I need to verify quality before proceeding.",
+      "confidence": "medium"
+    }]}

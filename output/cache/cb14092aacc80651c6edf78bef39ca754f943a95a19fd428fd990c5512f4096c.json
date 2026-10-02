@@ -1,0 +1,48 @@
+{
+  "persona": "Confused First-Time Shopper",
+  "run": 1,
+  "journey": [
+    {
+      "section_index": 0,
+      "section_type": "navigation",
+      "what_i_notice": "HOME NEW ARRIVALS EARRINGS NECKLACES BRACELETS RINGS MEN'S JEWELLERY SHOP ALL Log in Cart",
+      "customer_thought": "I can see the main categories and a cart, so I could start browsing.",
+      "information_gap": "No indication of featured products or where to begin.",
+      "decision": "continue",
+      "next_information_needed": "A hero/banner or highlighted product to guide me.",
+      "reason": "The navigation gives me a way in, but I need a visual cue.",
+      "confidence": "medium"
+    },
+    {
+      "section_index": 1,
+      "section_type": "other",
+      "what_i_notice": "18K gold plated · elevate your everyday look · made to last a lifetime Buy 2 or more, get upto 50% off · No code needed Save ₹120 more on prepaid orders + express delivery (repeated several times)",
+      "customer_thought": "There are promotions, but I don't know which products they apply to.",
+      "information_gap": "No product images or specific items linked to the offers.",
+      "decision": "hesitate",
+      "next_information_needed": "Clear product thumbnails tied to the discounts.",
+      "reason": "The text is repetitive and gives no visual direction.",
+      "confidence": "low"
+    },
+    {
+      "section_index": 2,
+      "section_type": "other",
+      "what_i_notice": "NEW ARRIVALS Sale Halo Cuff Bracelet … price details, plus a few review snippets.",
+      "customer_thought": "There are several bracelets and necklaces on sale, and I see some positive reviews.",
+      "information_gap": "I can't tell the differences between the items or see images.",
+      "decision": "continue",
+      "next_information_needed": "Product images and brief feature highlights.",
+      "reason": "The price info is useful but I need visual and descriptive cues to compare.",
+      "confidence": "low"
+    },
+    {
+      "section_index": 6,
+      "section_type": "other",
+      "what_i_notice": "Repeats the same product list without additional detail.",
+      "customer_thought": "This is just the same information again; nothing new.",
+      "information_gap": "Still no visual or descriptive differentiation.",
+      "decision": "hesitate",
+      "next_information_needed": "Clickable links to detailed product pages.",
+      "reason": "Redundancy adds to my confusion.",
+      "confidence": "low"
+    }]}

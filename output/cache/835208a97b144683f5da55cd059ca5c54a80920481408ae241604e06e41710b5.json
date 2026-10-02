@@ -1,0 +1,48 @@
+{
+  "persona": "Deal Comparison Shopper",
+  "run": 1,
+  "journey": [
+    {
+      "section_index": 0,
+      "section_type": "navigation",
+      "what_i_notice": "Top navigation bar with links: HOME, NEW ARRIVALS, EARRINGS, NECKLACES, BRACELETS, RINGS, MEN'S JEWELLERY, SHOP ALL, Log in, Cart.",
+      "customer_thought": "I can jump straight to the product categories I’m interested in.",
+      "information_gap": "No indication of current promotions or deals from the navigation alone.",
+      "decision": "continue",
+      "next_information_needed": "See a landing area that highlights discounts or best‑value bundles.",
+      "reason": "Navigation is clear but does not address my need for value information.",
+      "confidence": "medium"
+    },
+    {
+      "section_index": 1,
+      "section_type": "hero",
+      "what_i_notice": "Long promotional copy: 18K gold plated, \"Buy 2 or more, get up to 50% off\", \"No code needed\", \"Save ₹120 more on prepaid orders + express delivery\" repeated several times.",
+      "customer_thought": "There is a big discount if I buy multiple items, and I might save on shipping if I pay prepaid.",
+      "information_gap": "Which specific products qualify, how the 50% is calculated, and what the final price (including shipping) will be.",
+      "decision": "hesitate",
+      "next_information_needed": "Detailed pricing table showing regular price, discount amount per SKU, and shipping cost breakdown.",
+      "reason": "Discount terms are vague; I need concrete numbers to compare.",
+      "confidence": "low"
+    },
+    {
+      "section_index": 2,
+      "section_type": "social_proof",
+      "what_i_notice": "Product snippets with regular and sale prices (e.g., Halo Cuff Bracelet ₹1,500 → ₹1,425) and a few positive review excerpts.",
+      "customer_thought": "Some items are on sale, and other shoppers like the quality.",
+      "information_gap": "No total price including shipping, no bundle options, and no clear return policy visible here.",
+      "decision": "continue",
+      "next_information_needed": "Full product pages with price, shipping, and bundle information.",
+      "reason": "Price hints are useful but incomplete for my total‑cost comparison.",
+      "confidence": "medium"
+    },
+    {
+      "section_index": 6,
+      "section_type": "other",
+      "what_i_notice": "Repeats the same product list with regular and sale prices, no additional details.",
+      "customer_thought": "The site is showing the same limited set of items again.",
+      "information_gap": "Cannot see the full catalog or any bundle deals.",
+      "decision": "continue",
+      "next_information_needed": "Category navigation or a broader product grid.",
+      "reason": "I need to explore more options before deciding.",
+      "confidence": "medium"
+    }]}

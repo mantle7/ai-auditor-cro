@@ -1,0 +1,26 @@
+{
+  "persona": "Returning D2C Customer",
+  "run": 1,
+  "journey": [
+    {
+      "section_index": 0,
+      "section_type": "navigation",
+      "what_i_notice": "Top navigation bar with links: HOME, NEW ARRIVALS, EARRINGS, NECKLACES, BRACELETS, RINGS, MEN'S JEWELLERY, SHOP ALL, Log in, Cart.",
+      "customer_thought": "I need to find the product I bought before or a related item quickly. The navigation gives me categories, but there is no direct link to my past order.",
+      "information_gap": "Where can I view my previous orders or a ‘Reorder’ shortcut?",
+      "decision": "continue",
+      "next_information_needed": "A clear path to my order history or a quick‑search for the product name.",
+      "reason": "The navigation shows categories, which could lead to the product, but I don’t see a specific reorder option.",
+      "confidence": "medium"
+    },
+    {
+      "section_index": 1,
+      "section_type": "hero",
+      "what_i_notice": "Large promotional text: “18K gold plated · elevate your everyday look · made to last a lifetime … Buy 2 or more, get up to 50% off … Save ₹120 more on prepaid orders + express delivery”. No images or button.",
+      "customer_thought": "There are discounts and fast delivery, but I don’t know which products are being promoted.",
+      "information_gap": "What specific items are covered by these offers? Is there a ‘Shop Now’ link?",
+      "decision": "hesitate",
+      "next_information_needed": "A visible CTA that takes me to the discounted product list.",
+      "reason": "The copy is enticing but lacks a clear action to explore the offers.",
+      "confidence": "low"
+    }]}

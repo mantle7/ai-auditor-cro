@@ -1,0 +1,54 @@
+{
+  "overall_summary":"The site shows promising product variety but suffers from weak trust cues, unclear discount messaging, duplicated navigation, and under‑leveraged social proof, all of which can hinder first‑time visitors from converting.",
+  "findings":[
+    {
+      "title":"Missing prominent trust and security signals",
+      "severity":"high",
+      "type":"trust",
+      "evidence":["Payment methods © 2026, Zorai Lifestyle","Do you offer returns or exchange?","FAQ Is Zorai jewellery hypoallergenic and safe for sensitive skin?"],
+      "interpretation":"Visitors cannot quickly see that payments are secure or that returns are easy, creating doubt about purchasing.",
+      "hypothesis":"Lack of visible trust badges and clear return policy may increase perceived risk, reducing add‑to‑cart and checkout completion.",
+      "recommendation":"Add universally recognized security icons (SSL, payment logos) near the checkout button and place a concise return policy statement on product pages.",
+      "suggested_change":"Insert a line like \"Free returns within 30 days & secure checkout (Visa, MasterCard, PayPal)\" next to the price.",
+      "confidence":"high"
+    },
+    {
+      "title":"Unclear discount and promotion wording",
+      "severity":"medium",
+      "type":"messaging",
+      "evidence":["Buy 2 or more, get upto 50% off · No code needed","Save ₹120 more on prepaid orders + express delivery","Add 2 or more pieces in your cart and save more- Upto 50% off!"],
+      "interpretation":"The repeated, overlapping messages make it hard to understand what discount applies and how to qualify.",
+      "hypothesis":"Confusing promotions can cause cart abandonment as shoppers hesitate to meet unclear thresholds.",
+      "recommendation":"Consolidate the promotion into a single, clear banner with explicit conditions and visual hierarchy.",
+      "suggested_change":"Replace all three lines with: \"Buy 2+ items – up to 50% off + extra ₹120 off prepaid orders. No code needed.\"",
+      "confidence":"medium"
+    },
+    {
+      "title":"Duplicated navigation and absent primary CTA",
+      "severity":"medium",
+      "type":"ux",
+      "evidence":["HOME NEW ARRIVALS EARRINGS NECKLACES BRACELETS RINGS MEN'S JEWELLERY SHOP ALL Log in Cart","HOME NEW ARRIVALS EARRINGS NECKLACES BRACELETS RINGS MEN'S JEWELLERY SHOP ALL Log in Cart","ctas",":",[]],
+      "interpretation":"Navigation appears twice, cluttering the header, while no explicit \"Add to Cart\" or \"Buy Now\" button is captured in the data, likely confusing users.",
+      "hypothesis":"Redundant menus increase cognitive load and the missing CTA reduces the path to purchase, lowering conversion rates.",
+      "recommendation":"Streamline the header to a single navigation bar and ensure a prominent, consistently styled \"Add to Cart\" button on each product page.",
+      "suggested_change":"Remove duplicate menu items and add a button with text \"Add to Cart – ₹1,425\" directly beneath the product price.",
+      "confidence":"medium"
+    },
+    {
+      "title":"Social proof not prominently integrated",
+      "severity":"low",
+      "type":"trust",
+      "evidence":["Let customers speak for us from 27 reviews","The bracelet stack is amazing! It looks so well put!","Very nice jewellery, looks sober and beautiful. Very stylish and non allergic."],
+      "interpretation":"Customer reviews exist but are buried in a separate section and not tied to individual products.",
+      "hypothesis":"When shoppers cannot see relevant reviews near the product, they miss reassurance, potentially reducing confidence to buy.",
+      "recommendation":"Display a summary rating and a few highlighted reviews directly on each product page, with a link to view all.",
+      "suggested_change":"Add a star rating (e.g., 4.8/5) and excerpt: \"'Very nice jewellery, looks sober and beautiful' – Kajori\" under the product description.",
+      "confidence":"low"
+    }
+  ],
+  "top_3_priorities":[
+    "Missing prominent trust and security signals",
+    "Unclear discount and promotion wording",
+    "Duplicated navigation and absent primary CTA"
+  ]
+}

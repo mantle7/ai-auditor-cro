@@ -1,0 +1,12 @@
+{
+  "total_runs":1,
+  "decision_summary":{"continue":0,"hesitate":1,"abandon":0},
+  "overall_decision":"hesitate",
+  "confidence":"medium",
+  "key_patterns":[
+    {
+      "issue":"Unclear calls‑to‑action and missing credibility signals",
+      "frequency":1,
+      "severity":"high",
+      "evidence":"Both navigation and content sections left the persona unsure about how to obtain the guide and questioned Ibrahim’s expertise and the cost‑free nature of the meeting."
+    }]}

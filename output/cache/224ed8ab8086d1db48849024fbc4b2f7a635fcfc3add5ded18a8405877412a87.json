@@ -1,0 +1,48 @@
+{
+  "persona":"SaaS Growth Manager",
+  "run":1,
+  "journey":[
+    {
+      "section_index":0,
+      "section_type":"navigation",
+      "what_i_notice":"A top navigation bar with links: Products, Solutions, Developers, Company, Pricing, Ask AI, Contact, Sign in, Get started.",
+      "customer_thought":"I need a quick way to learn about pricing or request a demo; the navigation shows where I might go.",
+      "information_gap":"No obvious link to a demo request or pricing summary from this bar.",
+      "decision":"continue",
+      "next_information_needed":"A clear path to pricing details or a demo‑request form.",
+      "reason":"The navigation is standard but doesn’t immediately address my primary goal.",
+      "confidence":"medium"
+    },
+    {
+      "section_index":1,
+      "section_type":"hero",
+      "what_i_notice":"Long copy describing building Chat, Video, Feeds, Moderation; claims of shipping in minutes, scaling to billions, eBay example, and a list of SDKs. Text mentions “Get started” and “Talk to an expert” but no visible button.",
+      "customer_thought":"The product seems powerful and used by large companies, but the message is overwhelming and I can’t tell how to proceed.",
+      "information_gap":"How do I request a demo or see pricing? What does “Get started” actually entail?",
+      "decision":"hesitate",
+      "next_information_needed":"A concise value statement and a visible CTA for a demo or free trial.",
+      "reason":"Too much jargon and no clear next step.",
+      "confidence":"low"
+    },
+    {
+      "section_index":2,
+      "section_type":"hero",
+      "what_i_notice":"A repeat of the previous hero with slightly shorter copy, still mentioning scale (1B+ conversations, 277M+ pieces of content) and “Get started”. No actionable button.",
+      "customer_thought":"The repetition doesn’t add clarity; I’m still unsure how to engage.",
+      "information_gap":"Specifics on trial access, pricing, and integration effort.",
+      "decision":"continue",
+      "next_information_needed":"A direct link to a demo request or pricing page.",
+      "reason":"I’m looking for concrete next steps.",
+      "confidence":"low"
+    },
+    {
+      "section_index":3,
+      "section_type":"other",
+      "what_i_notice":"A single line that says “Show more”.",
+      "customer_thought":"Maybe more details will appear if I click.",
+      "information_gap":"What additional content will be revealed?",
+      "decision":"continue",
+      "next_information_needed":"Expanded product details or case studies.",
+      "reason":"Curiosity about deeper information.",
+      "confidence":"medium"
+    }]}
