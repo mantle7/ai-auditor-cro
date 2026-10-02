@@ -104,7 +104,24 @@ if submitted:
                 text=True,
                 timeout=180,
             )
-            st.code(result.stdout or result.stderr, language="text")
+            audit_output = result.stdout or result.stderr
+            # Forward child-process output to Streamlit Cloud's app logs.
+            print(audit_output, flush=True)
+            st.code(audit_output, language="text")
+
+            audit_log_path = OUTPUT_DIR / "audit_log.jsonl"
+            if audit_log_path.exists():
+                log_lines = audit_log_path.read_text(
+                    encoding="utf-8"
+                ).splitlines()
+                if log_lines:
+                    latest_event = json.loads(log_lines[-1])
+                    st.caption(
+                        "Latest audit log: "
+                        f"{latest_event.get('timestamp_ist')} IST | "
+                        f"{latest_event.get('status')} | "
+                        f"{latest_event.get('url')}"
+                    )
 
             if result.returncode == 0 and REPORT_PATH.exists():
                 status.update(label="Audit complete", state="complete")
